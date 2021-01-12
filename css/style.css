@@ -1,0 +1,114 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center h1 {
+    font-size: 40px;
+    color: white;
+    background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, rgb(0, 255, 0) 14.28%, rgb(0, 255, 255) 21.4%, cyan 28.56%, blue 35.7%, magenta 42.84%, red 50%);
+    background-size: 600vw 600vw;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    animation: slide 5s linear infinite forwards;
+}
+
+@keyframes slide {
+    0% {
+        background-position-x: 0%;
+    }
+    100% {
+        background-position-y: 600vw;
+    }
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 4s;
+    margin: -125 0;
+}
+
+#logo path:nth-child(2) {
+    stroke-dasharray: 230px;
+    stroke-dashoffset: 230px;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+
+#logo path:nth-child(3) {
+    stroke-dasharray: 347px;
+    stroke-dashoffset: 347px;
+    animation: line-anim 2s ease forwards 0.6s;
+}
+
+#logo path:nth-child(4) {
+    stroke-dasharray: 755px;
+    stroke-dashoffset: 755px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#logo path:nth-child(5) {
+    stroke-dasharray: 494px;
+    stroke-dashoffset: 494px;
+    animation: line-anim 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(6) {
+    stroke-dasharray: 337px;
+    stroke-dashoffset: 337px;
+    animation: line-anim 2s ease forwards 1.3s;
+}
+
+#logo path:nth-child(7) {
+    stroke-dasharray: 335px;
+    stroke-dashoffset: 335px;
+    animation: line-anim 2s ease forwards 1.5s;
+}
+
+#logo path:nth-child(8) {
+    stroke-dasharray: 409px;
+    stroke-dashoffset: 409px;
+    animation: line-anim 2s ease forwards 1.8s;
+}
+
+#logo path:nth-child(9) {
+    stroke-dasharray: 515px;
+    stroke-dashoffset: 515px;
+    animation: line-anim 2s ease forwards 2.1s;
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#particles-js {
+    height: 100%;
+    background: #006266;
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: blue;
+    }
+}
